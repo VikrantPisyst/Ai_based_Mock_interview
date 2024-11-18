@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Analysis</title>
+   
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card shadow-lg">
+            <div class="card-body">
+                <h2 class="card-title text-center mb-4">Interview Analysis Dashboard</h2>
+
+           
+
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <h5 class="font-weight-bold">Name of the User:</h5>
+                        <p class="text-muted">{{candidate_name}}</p> <!-- Static content -->
+                    </div>
+                    <div class="col-md-6">
+                        <h5 class="font-weight-bold">Language Chosen:</h5>
+                        <p class="text-muted">{{ topic }}</p> <!-- Static content -->
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <h5 class="font-weight-bold">Total Questions Attempted:</h5>
+                        <p class="text-muted">10</p> <!-- Static content -->
+                    </div>
+                    <div class="col-md-6">
+                        <h5 class="font-weight-bold">Correct Answers:</h5>
+                        <p class="text-muted">{{ correct_questions }}</p> <!-- Dynamic content -->
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <h5 class="font-weight-bold">Wrong Answers:</h5>
+                        <p class="text-muted">{{ wrong_questions }}</p> <!-- Dynamic content -->
+                    </div>
+                    <div class="col-md-6">
+                        <h5 class="font-weight-bold">Total Score %:</h5>
+                        <p class="text-muted">{{ total_score_percentage }}</p> <!-- Dynamic content -->
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <h5 class="font-weight-bold">Emotion Detected:</h5>
+                        <p class="text-muted">{{ final_emotion }}</p> <!-- Dynamic content -->
+                    </div>
+                    <div class="col-md-6">
+                        <h5 class="font-weight-bold">Area of Improvement:</h5>
+                        <p class="text-muted">{{area_of_improvement}}</p> <!-- Static content -->
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <h5 class="font-weight-bold">Interview Date:</h5>
+                        <p class="text-muted">{{current_date}}</p> <!-- Static content -->
+                    </div>
+
+                    <div class="col-md-6">
+                        <h5 class="font-weight-bold">Interview Time:</h5>
+                        <p class="text-muted">{{current_time}}</p> <!-- Static content -->
+                    </div>
+                   
+                </div>
+               
+
+                <div class="text-center mt-4">
+                    <button class="btn btn-primary" onclick="window.location.href='/';">Back to Home</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
