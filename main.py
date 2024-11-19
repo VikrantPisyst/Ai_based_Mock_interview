@@ -231,7 +231,12 @@ def analysis():
     retries = 0
 
     prompt = (
-     f"I have a dictionary containing question-answer pairs: {questions_answers}. For each question, evaluate the accuracy of the provided answers on a scale of 1 to 10 based on correctness and relevance. Include only improvement suggestions for answers that score less than 7. Calculate the total score and the overall percentage, then return a JSON response only with the structure:\n\n"
+    f"I have a dictionary containing question-answer pairs: {questions_answers}. "
+    "For each question, evaluate the accuracy of the provided answers on a scale of 1 to 10 based on correctness and relevance. "
+    "Include only improvement suggestions for answers that score less than 7. "
+    "Once all 10 questions have been answered, calculate the total score and the overall percentage. "
+    "Provide a final analysis that includes the number of correct and wrong answers, and summarize areas for improvement. "
+    "Return the JSON response with the following structure:\n\n"
     "{\n"
     "  'scores': {\n"
     "    'Question 1': score,\n"
@@ -247,8 +252,10 @@ def analysis():
     "  'correct_questions_count': correct_count,\n"
     "  'wrong_questions_count': wrong_count,\n"
     "  'area_of_improvement': 'Areas where improvements can be made'\n"
-    "},generate only json response dont add any introduction part just return json structure start with  this '{' and end with this '}' and return only json response "
+    "}\n"
+    "Generate only the JSON response; do not include any introductory text. Return the JSON structure starting with '{' and ending with '}'."
 )
+
 
 
     # Try generating a response, retry if a 404 error occurs
